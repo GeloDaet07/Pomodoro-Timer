@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/43303a3831.js" crossorigin="anonymous"></script>
+    <script type="module" src="pomodoro.js" defer></script>
+    <script type="module" src="settings.js" defer></script>
+</head>
+<body>
+    <div class="open-settings">
+        <div class="inner-content">
+            <div class="container">
+                <h1>Settings</h1>
+                <button id="close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="time-settings">
+                <label for="studyTime">Edit Study Duration:</label>
+                <input type="text" id="studyTime">
+                <label for="breakTime">Edit Break Duration:</label>
+                <input type="text" id="breakTime">
+                <label for="longBreakTime">Edit LongBreak Duration:</label>
+                <input type="text" id="longBreakTime">
+            </div>
+            <button class="save">Save</button>
+        </div>
+    </div>
+
+    <nav>
+        <h1>Pomodoro Timer</h1>
+        <button id="settings">Edit Pomodoro</button>
+    </nav>
+    <main>
+        <div class="pomodoro">
+            <div class="time"></div>
+            <div class="control">
+                <button class="start"><i class="fa-solid fa-play"></i></button>
+                <button class="pause"><i class="fa-solid fa-pause"></i></button>
+                <button class="restart"><i class="fa-solid fa-repeat"></i></button>
+                <button class="skip"><i class="fa-solid fa-forward"></i></button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,172 @@
+:root {
+    --bg-primary: #a02040;
+    --bg-secondary: #b34c66;
+    --bg-tertiary: #fff;
+
+    --break-primary: #ff7e2f;
+    --break-secondary: #ff9c59;
+
+    --long-break-primary: #008562;
+    --long-break-secondary: #009D74;
+
+    --font-primary: #fff;
+    --font-secondary: #000;
+
+    --save-button: #44464b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+}
+
+nav h1{
+    color: var(--font-primary);
+}
+
+nav #settings{
+    font-size: 1rem;
+    font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    font-weight: bold;
+    color: var(--font-secondary);
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.open-settings{
+    background-color: rgba(0, 0, 0, 0.4);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.open-settings.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+.open-settings .inner-content{
+    background-color: var(--bg-tertiary);
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    border-radius: 10px;
+}
+
+.open-settings .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.open-settings h1{
+    color: var(--font-secondary);
+    font-size: 3rem;
+}
+
+.open-settings #close{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4);;
+    color: var(--font-secondary);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.open-settings .time-settings label {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.open-settings .time-settings input{
+    width: 100%;
+    height: 3em;
+    margin-bottom: 1rem;
+}
+
+.open-settings .inner-content .save{
+    background-color: var(--save-button);
+    color: var(--font-primary);
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.pomodoro {
+    background-color: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 3rem;
+    margin: 5em;
+}
+
+.pomodoro .time{
+    font-size: 10rem;
+    font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--font-primary)
+}
+
+.pomodoro .control{
+    display: flex;
+}
+
+.pomodoro .control button{
+    font-size: 2.5rem;
+    font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    font-weight: bold;
+    color: var(--bg-secondary);
+    padding: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.pomodoro button:last-child{
+    margin-right: 0;
+}
+
+.pause, .restart, .skip{
+    display: none;
+}
