@@ -1,4 +1,4 @@
-import {setStudyTime, setBreakTime, setLongBreakTime} from "pomodoro.js";
+import {setStudyTime, setBreakTime, setLongBreakTime} from "./pomodoro.js";
 
 const openButton = document.querySelector("#settings");
 const closeButton = document.querySelector("#close");
