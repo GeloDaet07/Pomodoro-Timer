@@ -30,15 +30,15 @@ export function setStudyTime(value){
 
 export function setBreakTime(value){
     breakMinutes = Number(value);
-    minutes = breakMinutes;
     if (isBreak ==  true){
+        minutes = breakMinutes;
         timerElement.textContent = formatTime(minutes, breakSeconds);
     }
 }
 
 export function setLongBreakTime(value){
     longBreakMinutes = Number(value);
-    if (longBreak % cycles == 0){
+    if (isBreak ==  true && longBreak % cycles == 0){
         minutes = longBreakMinutes;
         timerElement.textContent = formatTime(minutes, breakSeconds);
     }
